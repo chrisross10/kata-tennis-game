@@ -1,9 +1,9 @@
 class Game
-  def initialize
+  def initialize(points)
+    @points = points
   end
 
   def score
-    'Love-Love'
+    @points
   end
-
 end
