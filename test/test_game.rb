@@ -10,10 +10,12 @@ describe 'Tennis Game' do
   end
 
   it 'scores points for player 1' do
-    points = { 'love-love' => ['15-love'] }
+    points = { 'love-love' => ['15-love', 'love-15'], 
+               '15-love' => ['30-love', '15-15'] }
     Game.new(points)
       .player1_scores
-      .score.must_equal '15-love'
+      .player1_scores
+      .score.must_equal '30-love'
   end
 
   it 'scores points for player 2' do
