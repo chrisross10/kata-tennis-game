@@ -11,4 +11,8 @@ class Game
   def player1_scores
     Game.new(@points, @points[score][0])
   end
+
+  def player2_scores
+    Game.new(@points, @points[score][0])
+  end
 end

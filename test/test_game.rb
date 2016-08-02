@@ -15,4 +15,11 @@ describe 'Tennis Game' do
       .player1_scores
       .score.must_equal '15-love'
   end
+
+  it 'scores points for player 2' do
+    points = { 'love-love' => ['love-15'] }
+    Game.new(points)
+      .player2_scores
+      .score.must_equal 'love-15'
+  end
 end
