@@ -1,13 +1,14 @@
 class Game
-  def initialize(points)
+  def initialize(points, score=points.keys.first)
+    @score = score
     @points = points
   end
 
   def score
-    @points
+    @score
   end
 
   def player1_scores
-    Game.new('15-love')
+    Game.new(@points, @points[score][0])
   end
 end
